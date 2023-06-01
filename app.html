@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo de Página Web</title>
+  <style>
+    .button {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    #htmlText, #cssText, #javascriptText, #domText {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button class="button" onclick="showText('htmlText')">HTML</button>
+  <button class="button" onclick="showText('cssText')">CSS</button>
+  <button class="button" onclick="showText('javascriptText')">JavaScript</button>
+  <button class="button" onclick="showText('domText')">DOM</button>
+
+  <p id="htmlText">HTML(HyperText Markup Language).  é o componente base da web. Isso quer dizer que ele permite a construção de websites e a inserção de novos conteúdos, como imagens e vídeos, por meio dos hipertextos.</p>
+  <p id="cssText">CSS é a sigla para Cascading Style Sheets, ou seja, Folhas de Estilo em Cascatas. É uma maneira de dar estilo ao código criado por linguagens como HTML, XML ou XHTML.</p>
+  <p id="javascriptText">O JavaScript é amplamente categorizado como uma linguagem de criação de scripts ou uma linguagem interpretada. </p>
+  <p id="domText">O DOM (Document Object Model) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na Web.</p>
+
+  <script>
+    function showText(id) {
+      var textElement = document.getElementById(id);
+      if (textElement.style.display === "none") {
+        textElement.style.display = "block";
+      } else {
+        textElement.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
